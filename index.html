@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Taha Portfolio</title>
+ <title>Taha Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -74,17 +74,40 @@
 <section id="hero" class="hero section dark-background" style="position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
 
   <!-- Background Video -->
-  <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+  <div class="d-none d-lg-block">
+    <video  autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
     <source src="assets/video/user.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <!-- Content Container -->
-  <div class="container" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 1;padding-left: 160px; color: var(--background-color);">
+  <div class="container" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 1; color: var(--background-color);">
     <h2 style="font-size: 3rem; color: var(--background-color);">Taha Shehzad</h2>
     <p style="font-size: 1.5rem;">I'm <span class="typed" data-typed-items="Laravel Developer, Freelancer, Full Stack Developer, RESTful API Developer"></span></p>
   </div>
+  </div>
 
+  <div class="d-block d-lg-none">
+    <!-- Background Video -->
+<video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+  <source src="assets/video/user.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Content Container -->
+<div class="container" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 1;  color: var(--background-color);">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <h2 class="text-start" style="font-size: 2.5rem; color: var(--background-color);">Taha Shehzad</h2>
+<p style="font-size: 1.5rem;">
+  I'm <span id="typed-mobile"></span>
+</p>
+
+    </div>
+  </div>
+</div>
+
+  </div>
 </section><!-- /Hero Section -->
 
     <!-- About Section -->
@@ -366,7 +389,7 @@ I bring passion, precision, and performance to every line of code. With a strong
         <h4>Marketplace Website</h4>
         <p>Developed in Laravel, this platform connects buyers and sellers with features like product listing, user auth, payments, messaging, and dashboard insights.</p>
         <a href="assets/img/portfolio/app-2.jpg" title="Marketplace Website" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-        <a href="portfolio-details-market.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+        <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
       </div>
     </div>
   </div><!-- End Portfolio Item -->
@@ -379,7 +402,7 @@ I bring passion, precision, and performance to every line of code. With a strong
         <h4>CRPT LAB System</h4>
         <p>Laravel-based web system for a lab agency offering drug and DNA test bookings, result tracking, admin reports, and client notifications via email and SMS.</p>
         <a href="assets/img/portfolio/app-3.jpg" title="CRPT LAB System" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-        <a href="portfolio-details-crt.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+        <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
       </div>
     </div>
   </div><!-- End Portfolio Item -->
@@ -650,7 +673,7 @@ I bring passion, precision, and performance to every line of code. With a strong
           </div>
 
           <div class="col-lg-7">
-            <form action="https://formspree.io/f/movlakno" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -693,6 +716,7 @@ I bring passion, precision, and performance to every line of code. With a strong
 
   </main>
 
+ 
   <footer id="footer" class="footer position-relative light-background">
 
     <div class="container">
@@ -703,6 +727,7 @@ I bring passion, precision, and performance to every line of code. With a strong
     </div>
 
   </footer>
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -723,6 +748,18 @@ I bring passion, precision, and performance to every line of code. With a strong
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed("#typed-mobile", {
+      strings: ["Laravel Developer", "Freelancer", "Full Stack Developer", "RESTful API Developer"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true
+    });
+  });
+</script>
 
 </body>
 
